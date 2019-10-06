@@ -8779,6 +8779,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="+3V14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="C18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="22p"/>
+<part name="C19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="22p"/>
+<part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9025,6 +9030,23 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </instance>
 <instance part="+3V14" gate="G$1" x="360.68" y="134.62" smashed="yes">
 <attribute name="VALUE" x="358.14" y="129.54" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND26" gate="1" x="266.7" y="109.22" smashed="yes">
+<attribute name="VALUE" x="264.16" y="106.68" size="1.778" layer="96"/>
+</instance>
+<instance part="C18" gate="G$1" x="370.84" y="127" smashed="yes">
+<attribute name="NAME" x="372.364" y="127.381" size="1.778" layer="95"/>
+<attribute name="VALUE" x="372.364" y="122.301" size="1.778" layer="96"/>
+</instance>
+<instance part="C19" gate="G$1" x="386.08" y="127" smashed="yes">
+<attribute name="NAME" x="387.604" y="127.381" size="1.778" layer="95"/>
+<attribute name="VALUE" x="387.604" y="122.301" size="1.778" layer="96"/>
+</instance>
+<instance part="GND27" gate="1" x="370.84" y="116.84" smashed="yes">
+<attribute name="VALUE" x="368.3" y="114.3" size="1.778" layer="96"/>
+</instance>
+<instance part="GND28" gate="1" x="386.08" y="116.84" smashed="yes">
+<attribute name="VALUE" x="383.54" y="114.3" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -9381,6 +9403,22 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="C17" gate="G$1" pin="2"/>
 <pinref part="GND25" gate="1" pin="GND"/>
 <wire x1="347.98" y1="147.32" x2="350.52" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND26" gate="1" pin="GND"/>
+<wire x1="266.7" y1="111.76" x2="266.7" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="U7" gate="G$1" pin="CLKSEL0"/>
+<wire x1="266.7" y1="119.38" x2="269.24" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C18" gate="G$1" pin="2"/>
+<pinref part="GND27" gate="1" pin="GND"/>
+<wire x1="370.84" y1="119.38" x2="370.84" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C19" gate="G$1" pin="2"/>
+<pinref part="GND28" gate="1" pin="GND"/>
+<wire x1="386.08" y1="119.38" x2="386.08" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RGB_!WR" class="0">
@@ -9787,13 +9825,17 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <net name="N$5" class="0">
 <segment>
 <pinref part="U7" gate="G$1" pin="XIN32"/>
-<wire x1="325.12" y1="142.24" x2="370.84" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="142.24" x2="386.08" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="C19" gate="G$1" pin="1"/>
+<wire x1="386.08" y1="142.24" x2="386.08" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="U7" gate="G$1" pin="CLKSEL1/XOUT32"/>
 <wire x1="325.12" y1="139.7" x2="370.84" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="C18" gate="G$1" pin="1"/>
+<wire x1="370.84" y1="139.7" x2="370.84" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

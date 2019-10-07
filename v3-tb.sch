@@ -9148,21 +9148,6 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <rectangle x1="1.746" y1="-0.254" x2="2.254" y2="0.254" layer="51"/>
 <rectangle x1="3.746" y1="-0.254" x2="4.254" y2="0.254" layer="51"/>
 </package>
-<package name="1X01" urn="urn:adsk.eagle:footprint:22382/1" library_version="4">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.016" shape="octagon"/>
-<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-</package>
 <package name="1X08" urn="urn:adsk.eagle:footprint:22262/1" library_version="4">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <wire x1="5.715" y1="1.27" x2="6.985" y2="1.27" width="0.1524" layer="21"/>
@@ -9467,12 +9452,6 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <packageinstance name="1_05X2MM"/>
 </packageinstances>
 </package3d>
-<package3d name="1X01" urn="urn:adsk.eagle:package:22485/2" type="model" library_version="4">
-<description>PIN HEADER</description>
-<packageinstances>
-<packageinstance name="1X01"/>
-</packageinstances>
-</package3d>
 <package3d name="1X08" urn="urn:adsk.eagle:package:22409/2" type="model" library_version="4">
 <description>PIN HEADER</description>
 <packageinstances>
@@ -9547,15 +9526,6 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="5" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-<symbol name="PINHD1" urn="urn:adsk.eagle:symbol:22381/1" library_version="4">
-<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="1.27" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="-6.35" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
-<text x="-6.35" y="3.175" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 <symbol name="PINHD8" urn="urn:adsk.eagle:symbol:22260/1" library_version="4">
 <wire x1="-6.35" y1="-10.16" x2="1.27" y2="-10.16" width="0.4064" layer="94"/>
@@ -9768,27 +9738,6 @@ Source: Epson Toyocom FC-12M.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="PINHD-1X1" urn="urn:adsk.eagle:component:22540/3" prefix="JP" uservalue="yes" library_version="4">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="PINHD1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1X01">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:22485/2"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="64" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="PINHD-1X8" urn="urn:adsk.eagle:component:22503/5" prefix="JP" uservalue="yes" library_version="4">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
@@ -9972,9 +9921,8 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <part name="J1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="MPU_SPI"/>
 <part name="J2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="MCU_SPI"/>
 <part name="J3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="MPU_I2C"/>
-<part name="J4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X7" device="" package3d_urn="urn:adsk.eagle:package:22477/2"/>
-<part name="J5" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="" package3d_urn="urn:adsk.eagle:package:22469/2"/>
-<part name="J6" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
+<part name="J4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X7" device="" package3d_urn="urn:adsk.eagle:package:22477/2" value="MPU_SPI"/>
+<part name="J5" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="" package3d_urn="urn:adsk.eagle:package:22469/2" value="MCU_SPI"/>
 <part name="J7" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="POWER"/>
 <part name="J8" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X8" device="" package3d_urn="urn:adsk.eagle:package:22409/2" value="RGB_D"/>
 <part name="J9" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="RGB_A"/>
@@ -9985,6 +9933,7 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <part name="GND29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J13" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="GROUND"/>
 <part name="GND30" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="J6" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -10273,10 +10222,6 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <attribute name="NAME" x="499.11" y="165.735" size="1.778" layer="95"/>
 <attribute name="VALUE" x="499.11" y="147.32" size="1.778" layer="96"/>
 </instance>
-<instance part="J6" gate="G$1" x="505.46" y="139.7" smashed="yes">
-<attribute name="NAME" x="499.11" y="142.875" size="1.778" layer="95"/>
-<attribute name="VALUE" x="499.11" y="134.62" size="1.778" layer="96"/>
-</instance>
 <instance part="J7" gate="A" x="459.74" y="223.52" smashed="yes">
 <attribute name="NAME" x="453.39" y="229.235" size="1.778" layer="95"/>
 <attribute name="VALUE" x="453.39" y="215.9" size="1.778" layer="96"/>
@@ -10313,6 +10258,10 @@ Source: Epson Toyocom FC-12M.pdf</description>
 </instance>
 <instance part="GND30" gate="1" x="474.98" y="215.9" smashed="yes">
 <attribute name="VALUE" x="472.44" y="213.36" size="1.778" layer="96"/>
+</instance>
+<instance part="J6" gate="G$1" x="505.46" y="137.16" smashed="yes">
+<attribute name="NAME" x="499.11" y="142.875" size="1.778" layer="95"/>
+<attribute name="VALUE" x="499.11" y="132.08" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -10580,10 +10529,6 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="38.1" y1="66.04" x2="35.56" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U3" gate="G$1" pin="D4"/>
-<wire x1="38.1" y1="63.5" x2="35.56" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="J8" gate="A" pin="4"/>
 <wire x1="449.58" y1="91.44" x2="457.2" y2="91.44" width="0.1524" layer="91"/>
 </segment>
@@ -10819,6 +10764,11 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <pinref part="U3" gate="G$1" pin="!WR"/>
 <wire x1="68.58" y1="55.88" x2="78.74" y2="55.88" width="0.1524" layer="91"/>
 <label x="68.58" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="1"/>
+<wire x1="502.92" y1="139.7" x2="490.22" y2="139.7" width="0.1524" layer="91"/>
+<label x="485.14" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -11197,18 +11147,6 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <label x="480.06" y="182.88" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="MPU_TOF_!INT" class="0">
-<segment>
-<pinref part="U6" gate="G$1" pin="GPIO1"/>
-<wire x1="180.34" y1="182.88" x2="165.1" y2="182.88" width="0.1524" layer="91"/>
-<label x="162.56" y="182.88" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J6" gate="G$1" pin="1"/>
-<wire x1="502.92" y1="139.7" x2="490.22" y2="139.7" width="0.1524" layer="91"/>
-<label x="480.06" y="139.7" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="MCU_CDC_PG2" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="PG2"/>
@@ -11371,6 +11309,22 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <segment>
 <pinref part="J8" gate="A" pin="5"/>
 <wire x1="449.58" y1="88.9" x2="457.2" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="D4"/>
+<wire x1="38.1" y1="63.5" x2="35.56" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MPU_TOF_GPIO" class="0">
+<segment>
+<pinref part="U6" gate="G$1" pin="GPIO1"/>
+<wire x1="180.34" y1="182.88" x2="165.1" y2="182.88" width="0.1524" layer="91"/>
+<label x="160.02" y="182.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="502.92" y1="137.16" x2="490.22" y2="137.16" width="0.1524" layer="91"/>
+<label x="477.52" y="137.16" size="1.778" layer="95"/>
+<pinref part="J6" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>

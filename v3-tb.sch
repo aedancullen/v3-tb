@@ -9781,7 +9781,11 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.127" drill="0.254">
+<clearance class="0" value="0.127"/>
+</class>
+<class number="1" name="power" width="0.254" drill="0.381">
+<clearance class="1" value="0.127"/>
 </class>
 </classes>
 <parts>
@@ -10526,7 +10530,7 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="449.58" y1="68.58" x2="457.2" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="91.44" y1="63.5" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
@@ -10714,7 +10718,7 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <pinref part="J6" gate="A" pin="1"/>
 </segment>
 </net>
-<net name="+3V3" class="0">
+<net name="+3V3" class="1">
 <segment>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 <wire x1="91.44" y1="114.3" x2="91.44" y2="111.76" width="0.1524" layer="91"/>
@@ -10846,7 +10850,7 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="441.96" y1="226.06" x2="441.96" y2="228.6" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="+1V8" class="0">
+<net name="+1V8" class="1">
 <segment>
 <pinref part="U4" gate="G$1" pin="VDD18"/>
 <wire x1="187.96" y1="73.66" x2="182.88" y2="73.66" width="0.1524" layer="91"/>

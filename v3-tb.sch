@@ -9865,7 +9865,7 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <part name="J2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="MCU_SPI"/>
 <part name="J3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="MPU_I2C"/>
 <part name="J5" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="" package3d_urn="urn:adsk.eagle:package:22469/2" value="MCU_ETC"/>
-<part name="J7" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="POWER"/>
+<part name="J7" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="J8" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X8" device="" package3d_urn="urn:adsk.eagle:package:22409/2" value="RGB_D"/>
 <part name="J9" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="RGB_A"/>
 <part name="J10" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="HRDAC"/>
@@ -9873,7 +9873,7 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <part name="J12" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X6" device="" package3d_urn="urn:adsk.eagle:package:22472/2" value="CDC_PC"/>
 <part name="+3V15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J13" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="GROUND"/>
+<part name="J13" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="GND"/>
 <part name="GND30" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X6" device="" package3d_urn="urn:adsk.eagle:package:22472/2" value="MPU_ETC"/>
 <part name="J6" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
@@ -10256,7 +10256,7 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <label x="472.44" y="157.48" size="1.778" layer="95"/>
 </segment>
 </bus>
-<bus name="MCU_SPI:MISO,MOSI,SCK">
+<bus name="MCU_SPI:MCU_MISO,MCU_MOSI,MCU_SCK">
 <segment>
 <wire x1="236.22" y1="68.58" x2="236.22" y2="73.66" width="0.762" layer="92"/>
 <wire x1="236.22" y1="73.66" x2="254" y2="73.66" width="0.762" layer="92"/>
@@ -10268,7 +10268,7 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <label x="436.88" y="154.94" size="1.778" layer="95"/>
 </segment>
 </bus>
-<bus name="MPU_SPI:MISO,MOSI,SCK">
+<bus name="MPU_SPI:MPU_MISO,MPU_MOSI,MPU_SCK">
 <segment>
 <wire x1="104.14" y1="187.96" x2="104.14" y2="193.04" width="0.762" layer="92"/>
 <wire x1="104.14" y1="193.04" x2="88.9" y2="193.04" width="0.762" layer="92"/>
@@ -10285,7 +10285,7 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <label x="436.88" y="175.26" size="1.778" layer="95"/>
 </segment>
 </bus>
-<bus name="MPU_I2C:SCL,SDA">
+<bus name="MPU_I2C:MPU_SCL,MPU_SDA">
 <segment>
 <wire x1="177.8" y1="187.96" x2="177.8" y2="190.5" width="0.762" layer="92"/>
 <wire x1="177.8" y1="190.5" x2="165.1" y2="190.5" width="0.762" layer="92"/>
@@ -10875,8 +10875,8 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="187.96" y1="60.96" x2="185.42" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J12" gate="A" pin="1"/>
-<wire x1="495.3" y1="76.2" x2="502.92" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="J12" gate="A" pin="3"/>
+<wire x1="495.3" y1="71.12" x2="502.92" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CDC_PC1" class="0">
@@ -10885,8 +10885,8 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="187.96" y1="58.42" x2="185.42" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J12" gate="A" pin="2"/>
-<wire x1="495.3" y1="73.66" x2="502.92" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="J12" gate="A" pin="4"/>
+<wire x1="495.3" y1="68.58" x2="502.92" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CDC_PC2" class="0">
@@ -10895,8 +10895,8 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="187.96" y1="55.88" x2="185.42" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J12" gate="A" pin="3"/>
-<wire x1="495.3" y1="71.12" x2="502.92" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="J12" gate="A" pin="5"/>
+<wire x1="495.3" y1="66.04" x2="502.92" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CDC_PC3" class="0">
@@ -10905,8 +10905,8 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="187.96" y1="53.34" x2="185.42" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J12" gate="A" pin="4"/>
-<wire x1="495.3" y1="68.58" x2="502.92" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="J12" gate="A" pin="6"/>
+<wire x1="495.3" y1="63.5" x2="502.92" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CDC_PC4" class="0">
@@ -10915,8 +10915,8 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="187.96" y1="50.8" x2="185.42" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J12" gate="A" pin="5"/>
-<wire x1="495.3" y1="66.04" x2="502.92" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="J12" gate="A" pin="1"/>
+<wire x1="495.3" y1="76.2" x2="502.92" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CDC_PC5" class="0">
@@ -10925,8 +10925,8 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="187.96" y1="48.26" x2="185.42" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J12" gate="A" pin="6"/>
-<wire x1="495.3" y1="63.5" x2="502.92" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="J12" gate="A" pin="2"/>
+<wire x1="495.3" y1="73.66" x2="502.92" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -10980,73 +10980,6 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="180.34" y1="185.42" x2="157.48" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="157.48" y1="185.42" x2="157.48" y2="187.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="MOSI" class="0">
-<segment>
-<pinref part="U4" gate="G$1" pin="MOSI_SDA"/>
-<wire x1="233.68" y1="73.66" x2="236.22" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U5" gate="G$1" pin="MOSI"/>
-<wire x1="106.68" y1="193.04" x2="104.14" y2="193.04" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U7" gate="G$1" pin="H_SA0/MOSI"/>
-<wire x1="269.24" y1="137.16" x2="266.7" y2="137.16" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J1" gate="A" pin="2"/>
-<wire x1="449.58" y1="175.26" x2="457.2" y2="175.26" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J2" gate="A" pin="2"/>
-<wire x1="449.58" y1="154.94" x2="457.2" y2="154.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="SCK" class="0">
-<segment>
-<pinref part="U4" gate="G$1" pin="SCK_SCL"/>
-<wire x1="233.68" y1="71.12" x2="236.22" y2="71.12" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U5" gate="G$1" pin="SCLK"/>
-<wire x1="106.68" y1="190.5" x2="104.14" y2="190.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U7" gate="G$1" pin="H_SCL/SCLK/RX"/>
-<wire x1="269.24" y1="132.08" x2="266.7" y2="132.08" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J1" gate="A" pin="3"/>
-<wire x1="449.58" y1="172.72" x2="457.2" y2="172.72" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J2" gate="A" pin="3"/>
-<wire x1="449.58" y1="152.4" x2="457.2" y2="152.4" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="MISO" class="0">
-<segment>
-<pinref part="U4" gate="G$1" pin="MISO_PG1"/>
-<wire x1="233.68" y1="63.5" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="63.5" x2="236.22" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U5" gate="G$1" pin="MISO"/>
-<wire x1="106.68" y1="187.96" x2="104.14" y2="187.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U7" gate="G$1" pin="H_SDA/MISO/TX"/>
-<wire x1="269.24" y1="134.62" x2="266.7" y2="134.62" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J1" gate="A" pin="1"/>
-<wire x1="449.58" y1="177.8" x2="457.2" y2="177.8" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J2" gate="A" pin="1"/>
-<wire x1="449.58" y1="157.48" x2="457.2" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MCU_CDC_!CS" class="0">
@@ -11223,26 +11156,6 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <junction x="370.84" y="134.62"/>
 </segment>
 </net>
-<net name="SDA" class="0">
-<segment>
-<pinref part="U6" gate="G$1" pin="SDA"/>
-<wire x1="177.8" y1="190.5" x2="180.34" y2="190.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J3" gate="G$1" pin="2"/>
-<wire x1="449.58" y1="137.16" x2="457.2" y2="137.16" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="SCL" class="0">
-<segment>
-<pinref part="U6" gate="G$1" pin="SCL"/>
-<wire x1="177.8" y1="187.96" x2="180.34" y2="187.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J3" gate="G$1" pin="1"/>
-<wire x1="449.58" y1="139.7" x2="457.2" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="RGB_D4" class="0">
 <segment>
 <pinref part="J8" gate="A" pin="5"/>
@@ -11275,6 +11188,99 @@ Source: Epson Toyocom FC-12M.pdf</description>
 <wire x1="502.92" y1="134.62" x2="490.22" y2="134.62" width="0.1524" layer="91"/>
 <label x="477.52" y="134.62" size="1.778" layer="95"/>
 <pinref part="J6" gate="A" pin="3"/>
+</segment>
+</net>
+<net name="MPU_SDA" class="0">
+<segment>
+<pinref part="U6" gate="G$1" pin="SDA"/>
+<wire x1="177.8" y1="190.5" x2="180.34" y2="190.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="1"/>
+<wire x1="449.58" y1="139.7" x2="457.2" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MPU_SCL" class="0">
+<segment>
+<pinref part="U6" gate="G$1" pin="SCL"/>
+<wire x1="177.8" y1="187.96" x2="180.34" y2="187.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="2"/>
+<wire x1="449.58" y1="137.16" x2="457.2" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MPU_MOSI" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="MOSI"/>
+<wire x1="104.14" y1="193.04" x2="106.68" y2="193.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="H_SA0/MOSI"/>
+<wire x1="266.7" y1="137.16" x2="269.24" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J1" gate="A" pin="1"/>
+<wire x1="449.58" y1="177.8" x2="457.2" y2="177.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MPU_SCK" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="SCLK"/>
+<wire x1="104.14" y1="190.5" x2="106.68" y2="190.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="H_SCL/SCLK/RX"/>
+<wire x1="266.7" y1="132.08" x2="269.24" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J1" gate="A" pin="3"/>
+<wire x1="449.58" y1="172.72" x2="457.2" y2="172.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MPU_MISO" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="MISO"/>
+<wire x1="104.14" y1="187.96" x2="106.68" y2="187.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="H_SDA/MISO/TX"/>
+<wire x1="266.7" y1="134.62" x2="269.24" y2="134.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J1" gate="A" pin="2"/>
+<wire x1="449.58" y1="175.26" x2="457.2" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MCU_MOSI" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="MOSI_SDA"/>
+<wire x1="236.22" y1="73.66" x2="233.68" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J2" gate="A" pin="1"/>
+<wire x1="449.58" y1="157.48" x2="457.2" y2="157.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MCU_SCK" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="SCK_SCL"/>
+<wire x1="236.22" y1="71.12" x2="233.68" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J2" gate="A" pin="3"/>
+<wire x1="449.58" y1="152.4" x2="457.2" y2="152.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MCU_MISO" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="MISO_PG1"/>
+<wire x1="236.22" y1="68.58" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="63.5" x2="233.68" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J2" gate="A" pin="2"/>
+<wire x1="449.58" y1="154.94" x2="457.2" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

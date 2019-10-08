@@ -173,6 +173,9 @@
 <wire x1="40.64" y1="0" x2="40.64" y2="48.26" width="0" layer="20"/>
 <wire x1="40.64" y1="48.26" x2="0" y2="48.26" width="0" layer="20"/>
 <wire x1="0" y1="48.26" x2="0" y2="0" width="0" layer="20"/>
+<text x="1.778" y="4.572" size="1" layer="25">33  18   G </text>
+<text x="1.778" y="4.572" size="1" layer="25">33  18   G </text>
+<text x="1.016" y="9.652" size="1" layer="25">WR  TG  WK  BT</text>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">

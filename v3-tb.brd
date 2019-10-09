@@ -176,7 +176,7 @@
 <text x="1.778" y="4.572" size="1" layer="25">33  18   G </text>
 <text x="1.778" y="4.572" size="1" layer="25" ratio="11">33  18   G </text>
 <text x="1.016" y="9.652" size="1" layer="25" ratio="11">WR  TG  WK  BT</text>
-<text x="38.608" y="26.162" size="1" layer="26" ratio="11" rot="MR0">V3-TB rev.A
+<text x="38.608" y="24.892" size="1" layer="26" ratio="11" rot="MR0">V3-TB rev.A
 (C) 2019 PVE</text>
 </plain>
 <libraries>
